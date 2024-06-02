@@ -76,6 +76,10 @@ export function Detail() {
     }
   }
 
+  function handleCloseModalDeleteMeal() {
+    setIsVisibleModal(false);
+  }
+
   async function fetchMeal() {
     try {
       setIsLoading(true);
@@ -115,7 +119,7 @@ export function Detail() {
                 <ButtonModal 
                   title="Cancelar" 
                   type="OUTLINED" 
-                  onPress={handleCancelDeleteMeal}
+                  onPress={handleCloseModalDeleteMeal}
                 />
               </ButtonCancelContent>
               <ButtonConfirmContent>
